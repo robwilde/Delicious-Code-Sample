@@ -45,7 +45,7 @@
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 		var myParser = new geoXML3.parser({map: map});
-		console.log(myParser);
+//		console.log(myParser);
 		myParser.parse(src);
 	}
 
@@ -134,7 +134,7 @@
 										if ( is_file( $dir . $file ) )
 										{
 											echo '<a href="' . $this->gmapz_admin_url . '&deleteFile=true&fileName=' . $file . '">';
-											echo '<img src="' . plugins_url( 'gmap-zones/assets/delete.gif' ) . '"></a>';
+											echo '<img src="' . plugins_url( 'assets/delete.gif', dirname(__FILE__) ) . '"></a>';
 											echo '<a href = "' . $this->gmapz_admin_url . '&fileName=' . $file . '">' . $file . '</a></br>';
 										}
 									}

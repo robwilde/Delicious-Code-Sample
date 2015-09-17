@@ -7,17 +7,15 @@
 	* @version      0.1a
 	*/
 
-	class Log
-	{
+	class Log {
 
 		# @string, Log directory name
 		private $path = '/logs/';
 
 		# @void, Default Constructor, Sets the timezone and path of the log files.
-		public function __construct ()
-		{
-			date_default_timezone_set ( 'Australia/Brisbane' );
-			$this->path = dirname ( __FILE__ ) . $this->path;
+		public function __construct() {
+			date_default_timezone_set( 'Australia/Brisbane' );
+			$this->path = dirname( __FILE__ ) . $this->path;
 		}
 
 		/**
@@ -34,30 +32,22 @@
 		 *     5. If log exists, edit method called.
 		 *     6. Edit method modifies the current log.
 		 */
-		public function write ( $message )
-		{
+		public function write( $message ) {
 			$date = new DateTime();
-			$log = $this->path . $date->format ( 'Y-m-d' ) . ".txt";
+			$log  = $this->path . $date->format( 'Y-m-d' ) . ".txt";
 
-			if ( is_dir ( $this->path ) )
-			{
-				if ( !file_exists ( $log ) )
-				{
-					$fh = fopen ( $log, 'a+' ) or die( "Fatal Error !" );
-					$logcontent = "Time : " . $date->format ( 'H:i:s' ) . "\r\n" . $message . "\r\n";
-					fwrite ( $fh, $logcontent );
-					fclose ( $fh );
+			if ( is_dir( $this->path ) ) {
+				if ( ! file_exists( $log ) ) {
+					$fh = fopen( $log, 'a+' ) or die( "Fatal Error !" );
+					$logcontent = "Time : " . $date->format( 'H:i:s' ) . "\r\n" . $message . "\r\n";
+					fwrite( $fh, $logcontent );
+					fclose( $fh );
+				} else {
+					$this->edit( $log, $date, $message );
 				}
-				else
-				{
-					$this->edit ( $log, $date, $message );
-				}
-			}
-			else
-			{
-				if ( mkdir ( $this->path, 0775 ) === TRUE )
-				{
-					$this->write ( $message );
+			} else {
+				if ( mkdir( $this->path, 0775 ) === true ) {
+					$this->write( $message );
 				}
 			}
 		}
@@ -68,13 +58,12 @@
 		 *  Modifies current log and adds the message to the log.
 		 *
 		 * @param string $log
-		 * @param Date Time Object $date
+		 * @param Date/Time Object $date
 		 * @param string $message
 		 */
-		private function edit ( $log, $date, $message )
-		{
-			$logcontent = "Time : " . $date->format ( 'H:i:s' ) . "\r\n" . $message . "\r\n\r\n";
-			$logcontent = $logcontent . file_get_contents ( $log );
-			file_put_contents ( $log, $logcontent );
+		private function edit( $log, $date, $message ) {
+			$logcontent = "Time : " . $date->format( 'H:i:s' ) . "\r\n" . $message . "\r\n\r\n";
+			$logcontent = $logcontent . file_get_contents( $log );
+			file_put_contents( $log, $logcontent );
 		}
 	}

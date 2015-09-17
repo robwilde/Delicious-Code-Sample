@@ -27,8 +27,7 @@
 	 * @subpackage Gmap_Zones/includes
 	 * @author     Robert Wilde <webdev@wildetech.com.au>
 	 */
-	class Gmap_Zones
-	{
+	class Gmap_Zones {
 
 		/**
 		 * The loader that's responsible for maintaining and registering all hooks that power
@@ -71,10 +70,9 @@
 		 *
 		 * @since    0.1.0
 		 */
-		public function __construct()
-		{
+		public function __construct() {
 			$this->plugin_name = 'gmap-zones';
-			$this->version = '0.7.7';
+			$this->version     = '0.7.7';
 
 			$this->table_name = 'gmz_kml';
 
@@ -101,8 +99,7 @@
 		 * @since    0.1.0
 		 * @access   private
 		 */
-		private function load_dependencies()
-		{
+		private function load_dependencies() {
 			/**
 			 * The class responsible for orchestrating the actions and filters of the
 			 * core plugin.
@@ -147,8 +144,7 @@
 		 * @since    0.1.0
 		 * @access   private
 		 */
-		private function set_locale()
-		{
+		private function set_locale() {
 			$plugin_i18n = new Gmap_Zones_i18n();
 			$plugin_i18n->set_domain( $this->get_plugin_name() );
 
@@ -163,8 +159,7 @@
 		 * @since    0.1.0
 		 * @access   private
 		 */
-		private function define_admin_hooks()
-		{
+		private function define_admin_hooks() {
 			$plugin_admin = new Gmap_Zones_Admin(
 				$this->get_plugin_name(),
 				$this->get_version(),
@@ -186,8 +181,7 @@
 		 * @since    0.1.0
 		 * @access   private
 		 */
-		private function define_public_hooks()
-		{
+		private function define_public_hooks() {
 			$plugin_public = new Gmap_Zones_Public(
 				$this->get_plugin_name(),
 				$this->get_version(),
@@ -210,8 +204,7 @@
 		 *
 		 * @since    0.1.0
 		 */
-		public function run()
-		{
+		public function run() {
 			$this->loader->run();
 		}
 
@@ -223,8 +216,7 @@
 		 * @since     0.1.0
 		 * @return    string    The name of the plugin.
 		 */
-		public function get_plugin_name()
-		{
+		public function get_plugin_name() {
 			return $this->plugin_name;
 		}
 
@@ -235,8 +227,7 @@
 		 * @since     0.1.0
 		 * @return    Gmap_Zones_Loader    Orchestrates the hooks of the plugin.
 		 */
-		public function get_loader()
-		{
+		public function get_loader() {
 			return $this->loader;
 		}
 
@@ -247,20 +238,17 @@
 		 * @since     0.1.0
 		 * @return    string    The version number of the plugin.
 		 */
-		public function get_version()
-		{
+		public function get_version() {
 			return $this->version;
 		}
 
 
-		public function get_table_name()
-		{
+		public function get_table_name() {
 			return $this->table_name;
 		}
 
 
-		public function get_wpdb()
-		{
+		public function get_wpdb() {
 			return $this->wpdb_table;
 		}
 	}
