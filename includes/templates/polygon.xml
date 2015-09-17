@@ -1,0 +1,9 @@
+<Polygon>
+<tessellate>1</tessellate>
+    <altitudeMode>clampToGround</altitudeMode>
+<outerBoundaryIs>
+    <LinearRing>
+        <coordinates></coordinates>
+    </LinearRing>
+</outerBoundaryIs>
+</Polygon>

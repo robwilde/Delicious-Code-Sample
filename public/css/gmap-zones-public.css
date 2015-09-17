@@ -1,0 +1,329 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.span2 {
+    min-width: 5%;
+}
+
+.span5 {
+    width: 30%;
+}
+
+.span8 {
+    width: 53.33%;
+}
+
+.span10 {
+    width: 66.66%;
+}
+
+.span2,
+.span5,
+.span8,
+.span10 {
+    float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.status_parent {
+    min-height: 85px;
+}
+
+#spinner {
+    margin-top: 35px;
+    z-index: 2;
+    overflow: auto;
+    position: fixed;
+    display: none;
+    /*left: 40px;*/
+    margin-left: 185px;
+}
+
+.postcode_notice {
+    font-style: italic;
+}
+
+.white-popup-block {
+    background: #FFF none repeat scroll 0 0;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 880px;
+    margin: 40px auto;
+    border-radius: 14px;
+    border: 5px solid #8ec73e;
+}
+
+#modal_body {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.mfp-content {
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*margin: 0px auto;*/
+    /*text-align: left;*/
+    /*z-index: 1045;*/
+}
+
+#delivery_status {
+    display: none;
+    background-color: #8EC73E;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#delivery_status p {
+    padding: 5px 0 !important;
+}
+
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.span2 {
+    min-width: 5%;
+}
+
+.span5 {
+    width: 30%;
+}
+
+.span8 {
+    width: 53.33%;
+}
+
+.span10 {
+    width: 66.66%;
+}
+
+.span2,
+.span5,
+.span8,
+.span10 {
+    float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.status_parent {
+    /*position: absolute;*/
+    /*display: none;*/
+    min-height: 70px;
+}
+
+#spinner {
+    margin-top: 32px;
+    /* float: left; */
+    /*display: inline;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    display: none;
+    /*top: -24px;*/
+    /*left: 185px;*/
+    z-index: 2;
+    overflow: auto;
+}
+
+.postcode_notice {
+    font-style: italic;
+}
+
+.white-popup-block {
+    background: #FFF none repeat scroll 0% 0%;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 880px;
+    margin: 40px auto;
+    /*position: relative;*/
+    border-radius: 14px;
+    border: 5px solid #8ec73e;
+}
+
+#modal_body {
+    width: auto;
+    margin: 0 auto;
+}
+
+.mfp-content {
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*margin: 0px auto;*/
+    /*text-align: left;*/
+    /*z-index: 1045;*/
+}
+
+#delivery_status {
+    /*display: none;*/
+    /*min-height: 55px;*/
+    background-color: #8EC73E;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#delivery_status p {
+    margin: 0;
+}
+
+#delivery_status span.islands {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.popin {
+    background: #fff;
+    /*padding: 15px;*/
+    box-shadow: 0 0 20px #999;
+    border-radius: 2px;
+}
+
+#gmapz_modal .modal-info {
+    margin-bottom: 0;
+    /*position: absolute;*/
+}
+
+#map,
+#panorama {
+    background: #6699cc;
+}
+
+/** ========================================**/
+/* Large desktop */
+@media (min-width: 980px) {
+    #map {
+        height: 600px;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #map {
+        height: 400px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #map {
+        height: 300px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    #map {
+        height: 200px;
+    }
+}
+/** ========================================**/
+#geocoding_form {
+    margin-bottom: 0;
+}
+
+#geocoding_form label {
+    margin-top: 10px;
+}
+
+input#address {
+    width: 100px;
+}
+
+#gmapz_modal .input input[type=button],
+.modalfooter button {
+    background-color: #8EC73E;
+    color: #FFF;
+    border-color: #6CA51C;
+    min-width: 50px;
+    padding: 5px;
+    /*line-height: 1em;*/
+    margin: 4px 2px 0 0;
+    /*float: left;*/
+    font-size: 12px;
+    width: auto;
+    /*vertical-align: middle;*/
+    text-align: center;
+    text-decoration: none;
+    border: medium none;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 2px;
+}
+
+.modalfooter {
+    margin-bottom: 20px;
+}
+
+#gmapz_modal .modal-info {
+    margin-bottom: 0;
+}
+
+/*#map,*/
+/*#panorama {*/
+/*height:600px;*/
+/*background:#6699cc;*/
+/*}*/
+#geocoding_form {
+    margin-bottom: 0;
+}
+
+#geocoding_form label {
+    margin-top: 10px;
+}
+
+input#address {
+    width: 100px;
+}
+
+#gmapz_modal .input input[type=button],
+.modalfooter button {
+    background-color: #8EC73E;
+    color: #FFF;
+    border-color: #6CA51C;
+    min-width: 50px;
+    padding: 5px;
+    margin: 4px 2px 0 0;
+    font-size: 12px;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    border: medium none;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 2px;
+}
+
+.modalfooter_parent {
+    margin-bottom: 20px;
+}
